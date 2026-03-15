@@ -2,13 +2,169 @@
 <html>
 <head>
     <title>MyApps PCydia Repository</title>
+    <meta name="repo-name" content="MyApps Repo">
+    <meta name="repo-description" content="My personal PCydia repository">
+    <meta name="repo-maintainer" content="Algorithm Intensity">
+    <meta name="repo-icon" content="icon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .repo-info {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+        .package {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .package h3 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+        }
+        .meta {
+            color: #666;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 8px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .download-btn:hover {
+            background: #2980b9;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .install-link {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 10px 0;
+        }
+        table {
+            display: none;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+        }
+    </style>
 </head>
 <body>
-    <h1>MyApps for PCydia</h1>
-    <p>To add this repository to PCydia, click the button below.:</p>
-    <a href="pcydia://add-repo?link=https://algorithmintensity.github.io/myapps-pcydia/">
-        ➕ Add me to PCydia
-    </a>
-    <p><small>If the button does not work, make sure that PCydia is installed and has registered the pcydia:// protocol.</small></p>
+    <!-- Данные для PCydia (скрытая таблица) -->
+    <table id="packages-data">
+        <tr><td>Angry Birds</td><td>1.0</td><td>Развлечения</td><td>3.8 MB</td><td>debs/angrybirds.pcydia</td></tr>
+        <tr><td>Clock</td><td>1.2</td><td>Утилиты</td><td>131 KB</td><td>debs/clk.pcydia</td></tr>
+        <tr><td>CSGO Cheat</td><td>15.0</td><td>Malwares</td><td>138 KB</td><td>debs/csgo15-cheat-gamecrack.pcydia</td></tr>
+        <tr><td>Navalny</td><td>1.0</td><td>Игры</td><td>40 KB</td><td>debs/navalny.pcydia</td></tr>
+        <tr><td>Uninstall Tool</td><td>2.5</td><td>Утилиты</td><td>80 KB</td><td>debs/uninstalltool.pcydia</td></tr>
+    </table>
+
+    <h1>📦 MyApps PCydia Repository</h1>
+    
+    <div class="repo-info">
+        <p><strong>📌 URL:</strong> <code>https://algorithmintensity.github.io/myapps-pcydia/</code></p>
+        <p><strong>📦 Packages:</strong> 5</p>
+        <p><strong>👤 Maintainer:</strong> AlgorithmIntensity</p>
+    </div>
+
+    <div class="install-link">
+        <strong>🔗 One-click add to PCydia:</strong><br>
+        <a href="pcydia://add-repo?link=https://maxutko99.github.io/myapps-pcydia/">pcydia://add-repo?link=https://maxutko99.github.io/myapps-pcydia/</a>
+    </div>
+
+    <div class="warning">
+        ⚠️ These packages are provided as-is. Use at your own risk.
+    </div>
+
+    <h2>📥 Available Packages</h2>
+
+    <!-- Angry Birds -->
+    <div class="package">
+        <h3>🐦 Angry Birds 1.0</h3>
+        <div class="meta">📁 Category: Misc | 💾 Size: 3.8 MB</div>
+        <p>Classic Angry Birds game for Windows. Slingshot your way through levels and defeat those pesky pigs!</p>
+        <a href="debs/angrybirds.pcydia" class="download-btn">⬇️ Download angrybirds.pcydia</a>
+    </div>
+
+    <!-- CLK Tool -->
+    <div class="package">
+        <h3>⏰ Clock 1.2</h3>
+        <div class="meta">📁 Category: Utilities | 💾 Size: 131 KB</div>
+        <p>Just clock.</p>
+        <a href="debs/clk.pcydia" class="download-btn">⬇️ Download clk.pcydia</a>
+    </div>
+
+    <!-- CSGO Cheat -->
+    <div class="package">
+        <h3>🎮 CSGO Cheat by GameCrack 15.0</h3>
+        <div class="meta">📁 Category: MALWARES | 💾 Size: 138 KB</div>
+        <p>Counter-Strike: Global Offensive cheat tool. Features aimbot, wallhack and more.</p>
+        <div style="color: #e67e22; font-size: 13px; margin: 5px 0;">⚠️ This is malware! ⚠️</div>
+        <a href="debs/csgo15-cheat-gamecrack.pcydia" class="download-btn">⬇️ Download csgo15-cheat-gamecrack.pcydia</a>
+    </div>
+
+    <!-- Navalny -->
+    <div class="package">
+        <h3>⚓ Navalny 1.0</h3>
+        <div class="meta">📁 Category: Misc | 💾 Size: 40 KB</div>
+        <p>Navalny tool.</p>
+        <a href="debs/navalny.pcydia" class="download-btn">⬇️ Download navalny.pcydia</a>
+    </div>
+
+    <!-- Uninstall Tool -->
+    <div class="package">
+        <h3>🗑️ Uninstall Tool 2.5</h3>
+        <div class="meta">📁 Category: Utilities | 💾 Size: 80 KB</div>
+        <p>Advanced uninstaller that removes programs completely, including leftovers and registry entries.</p>
+        <a href="debs/uninstalltool.pcydia" class="download-btn">⬇️ Download uninstalltool.pcydia</a>
+    </div>
+
+    <h2>📖 How to use</h2>
+    <div class="repo-info">
+        <ol>
+            <li><strong>Add repository:</strong> Go to Sources tab → Add Source → Enter URL above</li>
+            <li><strong>Refresh:</strong> Click Refresh to load packages</li>
+            <li><strong>Install:</strong> Select package and click Install</li>
+            <li><strong>Run:</strong> Find installed apps in <code>%ProgramFiles%\AlgorithmIntensity\PCydia\apps\</code></li>
+        </ol>
+        
+        <p><strong>📂 One-click install link:</strong><br>
+        <code>pcydia://add-repo?link=https://algorithmintensity.github.io/myapps-pcydia/</code></p>
+    </div>
+
+    <footer>
+        <p>MyApps PCydia Repository | Maintained by Algorithm Intensity</p>
+    </footer>
 </body>
 </html>
